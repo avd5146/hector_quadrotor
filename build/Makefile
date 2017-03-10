@@ -241,6 +241,19 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named alt_com
+
+# Build rule for target.
+alt_com: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 alt_com
+.PHONY : alt_com
+
+# fast build rule for target.
+alt_com/fast:
+	$(MAKE) -f random_motion/CMakeFiles/alt_com.dir/build.make random_motion/CMakeFiles/alt_com.dir/build
+.PHONY : alt_com/fast
+
+#=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -278,19 +291,6 @@ geometry_msgs_generate_messages_py: cmake_check_build_system
 geometry_msgs_generate_messages_py/fast:
 	$(MAKE) -f random_motion/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make random_motion/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named last_try
-
-# Build rule for target.
-last_try: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 last_try
-.PHONY : last_try
-
-# fast build rule for target.
-last_try/fast:
-	$(MAKE) -f random_motion/CMakeFiles/last_try.dir/build.make random_motion/CMakeFiles/last_try.dir/build
-.PHONY : last_try/fast
 
 #=============================================================================
 # Target rules for targets named rand_vel
@@ -481,10 +481,10 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... alt_com"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... last_try"
 	@echo "... rand_vel"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"

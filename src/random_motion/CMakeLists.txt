@@ -197,11 +197,11 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-#add_executable(alt_com src/alt_com.cpp)
-#target_link_libraries(alt_com ${catkin_LIBRARIES})
+add_executable(alt_com src/alt_com.cpp)
+target_link_libraries(alt_com ${catkin_LIBRARIES})
 
-add_executable(last_try src/last_try.cpp)
-target_link_libraries(last_try ${catkin_LIBRARIES})
+#add_executable(last_try src/last_try.cpp)
+#target_link_libraries(last_try ${catkin_LIBRARIES})
 
 add_executable(rand_vel src/rand_vel.cpp)
 target_link_libraries(rand_vel ${catkin_LIBRARIES})

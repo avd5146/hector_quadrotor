@@ -150,6 +150,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+random_motion/CMakeFiles/alt_com.dir/rule:
+	cd /home/ankur/hector_quadrotor_ws/build && $(MAKE) -f CMakeFiles/Makefile2 random_motion/CMakeFiles/alt_com.dir/rule
+.PHONY : random_motion/CMakeFiles/alt_com.dir/rule
+
+# Convenience name for target.
+alt_com: random_motion/CMakeFiles/alt_com.dir/rule
+.PHONY : alt_com
+
+# fast build rule for target.
+alt_com/fast:
+	cd /home/ankur/hector_quadrotor_ws/build && $(MAKE) -f random_motion/CMakeFiles/alt_com.dir/build.make random_motion/CMakeFiles/alt_com.dir/build
+.PHONY : alt_com/fast
+
+# Convenience name for target.
 random_motion/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
 	cd /home/ankur/hector_quadrotor_ws/build && $(MAKE) -f CMakeFiles/Makefile2 random_motion/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 .PHONY : random_motion/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
@@ -190,20 +204,6 @@ geometry_msgs_generate_messages_py: random_motion/CMakeFiles/geometry_msgs_gener
 geometry_msgs_generate_messages_py/fast:
 	cd /home/ankur/hector_quadrotor_ws/build && $(MAKE) -f random_motion/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make random_motion/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-random_motion/CMakeFiles/last_try.dir/rule:
-	cd /home/ankur/hector_quadrotor_ws/build && $(MAKE) -f CMakeFiles/Makefile2 random_motion/CMakeFiles/last_try.dir/rule
-.PHONY : random_motion/CMakeFiles/last_try.dir/rule
-
-# Convenience name for target.
-last_try: random_motion/CMakeFiles/last_try.dir/rule
-.PHONY : last_try
-
-# fast build rule for target.
-last_try/fast:
-	cd /home/ankur/hector_quadrotor_ws/build && $(MAKE) -f random_motion/CMakeFiles/last_try.dir/build.make random_motion/CMakeFiles/last_try.dir/build
-.PHONY : last_try/fast
 
 # Convenience name for target.
 random_motion/CMakeFiles/rand_vel.dir/rule:
@@ -387,29 +387,29 @@ std_msgs_generate_messages_py/fast:
 	cd /home/ankur/hector_quadrotor_ws/build && $(MAKE) -f random_motion/CMakeFiles/std_msgs_generate_messages_py.dir/build.make random_motion/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
-src/last_try.o: src/last_try.cpp.o
-.PHONY : src/last_try.o
+src/alt_com.o: src/alt_com.cpp.o
+.PHONY : src/alt_com.o
 
 # target to build an object file
-src/last_try.cpp.o:
-	cd /home/ankur/hector_quadrotor_ws/build && $(MAKE) -f random_motion/CMakeFiles/last_try.dir/build.make random_motion/CMakeFiles/last_try.dir/src/last_try.cpp.o
-.PHONY : src/last_try.cpp.o
+src/alt_com.cpp.o:
+	cd /home/ankur/hector_quadrotor_ws/build && $(MAKE) -f random_motion/CMakeFiles/alt_com.dir/build.make random_motion/CMakeFiles/alt_com.dir/src/alt_com.cpp.o
+.PHONY : src/alt_com.cpp.o
 
-src/last_try.i: src/last_try.cpp.i
-.PHONY : src/last_try.i
+src/alt_com.i: src/alt_com.cpp.i
+.PHONY : src/alt_com.i
 
 # target to preprocess a source file
-src/last_try.cpp.i:
-	cd /home/ankur/hector_quadrotor_ws/build && $(MAKE) -f random_motion/CMakeFiles/last_try.dir/build.make random_motion/CMakeFiles/last_try.dir/src/last_try.cpp.i
-.PHONY : src/last_try.cpp.i
+src/alt_com.cpp.i:
+	cd /home/ankur/hector_quadrotor_ws/build && $(MAKE) -f random_motion/CMakeFiles/alt_com.dir/build.make random_motion/CMakeFiles/alt_com.dir/src/alt_com.cpp.i
+.PHONY : src/alt_com.cpp.i
 
-src/last_try.s: src/last_try.cpp.s
-.PHONY : src/last_try.s
+src/alt_com.s: src/alt_com.cpp.s
+.PHONY : src/alt_com.s
 
 # target to generate assembly for a file
-src/last_try.cpp.s:
-	cd /home/ankur/hector_quadrotor_ws/build && $(MAKE) -f random_motion/CMakeFiles/last_try.dir/build.make random_motion/CMakeFiles/last_try.dir/src/last_try.cpp.s
-.PHONY : src/last_try.cpp.s
+src/alt_com.cpp.s:
+	cd /home/ankur/hector_quadrotor_ws/build && $(MAKE) -f random_motion/CMakeFiles/alt_com.dir/build.make random_motion/CMakeFiles/alt_com.dir/src/alt_com.cpp.s
+.PHONY : src/alt_com.cpp.s
 
 src/rand_vel.o: src/rand_vel.cpp.o
 .PHONY : src/rand_vel.o
@@ -441,6 +441,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... alt_com"
 	@echo "... edit_cache"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_lisp"
@@ -448,7 +449,6 @@ help:
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
-	@echo "... last_try"
 	@echo "... list_install_components"
 	@echo "... rand_vel"
 	@echo "... rebuild_cache"
@@ -465,9 +465,9 @@ help:
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... test"
-	@echo "... src/last_try.o"
-	@echo "... src/last_try.i"
-	@echo "... src/last_try.s"
+	@echo "... src/alt_com.o"
+	@echo "... src/alt_com.i"
+	@echo "... src/alt_com.s"
 	@echo "... src/rand_vel.o"
 	@echo "... src/rand_vel.i"
 	@echo "... src/rand_vel.s"

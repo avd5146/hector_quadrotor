@@ -230,7 +230,7 @@ gtest/preinstall:
 gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ankur/hector_quadrotor_ws/build/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ankur/hector_quadrotor_ws/build/CMakeFiles  2
 	@echo "Built target gtest"
 .PHONY : gtest/CMakeFiles/gtest.dir/all
 
@@ -261,7 +261,7 @@ clean: gtest/CMakeFiles/gtest.dir/clean
 gtest/CMakeFiles/gtest_main.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ankur/hector_quadrotor_ws/build/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ankur/hector_quadrotor_ws/build/CMakeFiles  3
 	@echo "Built target gtest_main"
 .PHONY : gtest/CMakeFiles/gtest_main.dir/all
 
@@ -289,15 +289,15 @@ clean: gtest/CMakeFiles/gtest_main.dir/clean
 # Directory level rules for directory random_motion
 
 # Convenience name for "all" pass in the directory.
-random_motion/all: random_motion/CMakeFiles/last_try.dir/all
+random_motion/all: random_motion/CMakeFiles/alt_com.dir/all
 random_motion/all: random_motion/CMakeFiles/rand_vel.dir/all
 .PHONY : random_motion/all
 
 # Convenience name for "clean" pass in the directory.
+random_motion/clean: random_motion/CMakeFiles/alt_com.dir/clean
 random_motion/clean: random_motion/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
 random_motion/clean: random_motion/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 random_motion/clean: random_motion/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
-random_motion/clean: random_motion/CMakeFiles/last_try.dir/clean
 random_motion/clean: random_motion/CMakeFiles/rand_vel.dir/clean
 random_motion/clean: random_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 random_motion/clean: random_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
@@ -316,6 +316,41 @@ random_motion/clean: random_motion/CMakeFiles/std_msgs_generate_messages_py.dir/
 # Convenience name for "preinstall" pass in the directory.
 random_motion/preinstall:
 .PHONY : random_motion/preinstall
+
+#=============================================================================
+# Target rules for target random_motion/CMakeFiles/alt_com.dir
+
+# All Build rule for target.
+random_motion/CMakeFiles/alt_com.dir/all:
+	$(MAKE) -f random_motion/CMakeFiles/alt_com.dir/build.make random_motion/CMakeFiles/alt_com.dir/depend
+	$(MAKE) -f random_motion/CMakeFiles/alt_com.dir/build.make random_motion/CMakeFiles/alt_com.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ankur/hector_quadrotor_ws/build/CMakeFiles  1
+	@echo "Built target alt_com"
+.PHONY : random_motion/CMakeFiles/alt_com.dir/all
+
+# Include target in all.
+all: random_motion/CMakeFiles/alt_com.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+random_motion/CMakeFiles/alt_com.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ankur/hector_quadrotor_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 random_motion/CMakeFiles/alt_com.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ankur/hector_quadrotor_ws/build/CMakeFiles 0
+.PHONY : random_motion/CMakeFiles/alt_com.dir/rule
+
+# Convenience name for target.
+alt_com: random_motion/CMakeFiles/alt_com.dir/rule
+.PHONY : alt_com
+
+# clean rule for target.
+random_motion/CMakeFiles/alt_com.dir/clean:
+	$(MAKE) -f random_motion/CMakeFiles/alt_com.dir/build.make random_motion/CMakeFiles/alt_com.dir/clean
+.PHONY : random_motion/CMakeFiles/alt_com.dir/clean
+
+# clean rule for target.
+clean: random_motion/CMakeFiles/alt_com.dir/clean
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target random_motion/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
@@ -408,41 +443,6 @@ random_motion/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
 
 # clean rule for target.
 clean: random_motion/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target random_motion/CMakeFiles/last_try.dir
-
-# All Build rule for target.
-random_motion/CMakeFiles/last_try.dir/all:
-	$(MAKE) -f random_motion/CMakeFiles/last_try.dir/build.make random_motion/CMakeFiles/last_try.dir/depend
-	$(MAKE) -f random_motion/CMakeFiles/last_try.dir/build.make random_motion/CMakeFiles/last_try.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ankur/hector_quadrotor_ws/build/CMakeFiles  3
-	@echo "Built target last_try"
-.PHONY : random_motion/CMakeFiles/last_try.dir/all
-
-# Include target in all.
-all: random_motion/CMakeFiles/last_try.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-random_motion/CMakeFiles/last_try.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ankur/hector_quadrotor_ws/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 random_motion/CMakeFiles/last_try.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ankur/hector_quadrotor_ws/build/CMakeFiles 0
-.PHONY : random_motion/CMakeFiles/last_try.dir/rule
-
-# Convenience name for target.
-last_try: random_motion/CMakeFiles/last_try.dir/rule
-.PHONY : last_try
-
-# clean rule for target.
-random_motion/CMakeFiles/last_try.dir/clean:
-	$(MAKE) -f random_motion/CMakeFiles/last_try.dir/build.make random_motion/CMakeFiles/last_try.dir/clean
-.PHONY : random_motion/CMakeFiles/last_try.dir/clean
-
-# clean rule for target.
-clean: random_motion/CMakeFiles/last_try.dir/clean
 .PHONY : clean
 
 #=============================================================================
