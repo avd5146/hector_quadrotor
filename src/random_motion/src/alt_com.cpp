@@ -1,3 +1,18 @@
+/*
+ *  File name : alt_com.cpp
+ *
+ *      Author: Ankur Dalal
+ *  Created on: -/-/-
+ *
+ *
+ *  Copyright (C) 2017 by AVD Corp. DO NOT MISUSE.
+ *
+ * Description: Description about the file goes
+ *				here.
+ * 		  Note: Any special instructions for
+ *				using the file goes here.
+ */
+
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 #include <sensor_msgs/Range.h>
