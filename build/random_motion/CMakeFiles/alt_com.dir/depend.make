@@ -6,6 +6,7 @@ random_motion/CMakeFiles/alt_com.dir/src/alt_com.cpp.o: /opt/ros/indigo/include/
 random_motion/CMakeFiles/alt_com.dir/src/alt_com.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
 random_motion/CMakeFiles/alt_com.dir/src/alt_com.cpp.o: /opt/ros/indigo/include/geometry_msgs/Twist.h
 random_motion/CMakeFiles/alt_com.dir/src/alt_com.cpp.o: /opt/ros/indigo/include/geometry_msgs/Vector3.h
+random_motion/CMakeFiles/alt_com.dir/src/alt_com.cpp.o: /opt/ros/indigo/include/hector_uav_msgs/Altimeter.h
 random_motion/CMakeFiles/alt_com.dir/src/alt_com.cpp.o: /opt/ros/indigo/include/ros/advertise_options.h
 random_motion/CMakeFiles/alt_com.dir/src/alt_com.cpp.o: /opt/ros/indigo/include/ros/advertise_service_options.h
 random_motion/CMakeFiles/alt_com.dir/src/alt_com.cpp.o: /opt/ros/indigo/include/ros/assert.h
