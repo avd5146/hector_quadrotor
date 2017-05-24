@@ -24,4 +24,14 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>ROS</name>
+			<value>file:/opt/ros</value>
+		</variable>
+		<variable>
+			<name>ros</name>
+			<value>file:/opt/ros</value>
+		</variable>
+	</variableList>
 </projectDescription>

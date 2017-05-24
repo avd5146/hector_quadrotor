@@ -1,0 +1,8 @@
+prefix=/home/ankur/hector_quadrotor_ws/devel
+
+Name: fake_localization
+Description: Description of fake_localization
+Version: 1.14.0
+Cflags: 
+Libs: -L/home/ankur/hector_quadrotor_ws/devel/lib 
+Requires: roscpp rospy

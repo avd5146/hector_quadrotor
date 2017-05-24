@@ -1,0 +1,8 @@
+prefix=/home/ankur/hector_quadrotor_ws/devel
+
+Name: turtlebot3_bringup
+Description: Description of turtlebot3_bringup
+Version: 0.1.3
+Cflags: 
+Libs: -L/home/ankur/hector_quadrotor_ws/devel/lib 
+Requires: 

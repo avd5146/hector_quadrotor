@@ -197,6 +197,10 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+
+find_package(catkin REQUIRED COMPONENTS tf) # For tf_listener
+
 add_executable(alt_com src/alt_com.cpp)
 target_link_libraries(alt_com ${catkin_LIBRARIES})
 
@@ -205,3 +209,15 @@ target_link_libraries(alt_com ${catkin_LIBRARIES})
 
 add_executable(rand_vel src/rand_vel.cpp)
 target_link_libraries(rand_vel ${catkin_LIBRARIES})
+
+add_executable(rand_nav src/rand_nav.cpp)
+target_link_libraries(rand_nav ${catkin_LIBRARIES})
+
+add_executable(trajClient src/trajectoryClient.cpp)
+target_link_libraries(trajClient ${catkin_LIBRARIES})
+
+add_executable(tf_listener src/tf_listener.cpp)
+target_link_libraries(tf_listener ${catkin_LIBRARIES})
+
+add_executable(laser_scan src/laser_scan.cpp)
+target_link_libraries(laser_scan ${catkin_LIBRARIES})

@@ -17,6 +17,27 @@
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
 
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=Boost_DIR-NOTFOUND
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+//Boost library directory
+Boost_LIBRARY_DIR:PATH=/usr/lib/x86_64-linux-gnu
+
+//Boost python library (debug)
+Boost_PYTHON_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_python.so
+
+//Boost python library (release)
+Boost_PYTHON_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_python.so
+
+//Boost signals library (debug)
+Boost_SIGNALS_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_signals.so
+
+//Boost signals library (release)
+Boost_SIGNALS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_signals.so
+
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
 
@@ -221,8 +242,43 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 
+//Path where debug 3rdpaty OpenCV dependencies are located
+OpenCV_3RDPARTY_LIB_DIR_DBG:PATH=
+
+//Path where release 3rdpaty OpenCV dependencies are located
+OpenCV_3RDPARTY_LIB_DIR_OPT:PATH=
+
+OpenCV_CONFIG_PATH:FILEPATH=/usr/share/OpenCV
+
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/usr/share/OpenCV
+
+//Path where debug OpenCV libraries are located
+OpenCV_LIB_DIR_DBG:PATH=
+
+//Path where release OpenCV libraries are located
+OpenCV_LIB_DIR_OPT:PATH=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
+
+//Path to a file.
+PYTHON_INCLUDE_DIR:PATH=/usr/include/python2.7
+
+//Path to a file.
+PYTHON_INCLUDE_DIR2:PATH=/usr/include/x86_64-linux-gnu/python2.7
+
+//Path to a library.
+PYTHON_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython2.7.so
+
+//Path to a library.
+PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
+
+//Numpy include directory
+PYTHON_NUMPY_INCLUDE_DIR:PATH=/usr/lib/python2.7/dist-packages/numpy/core/include
 
 //Specify specific Python version to use ('major.minor' or 'major')
 PYTHON_VERSION:STRING=
@@ -235,6 +291,15 @@ Project_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src
 
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
+
+//Path to a library.
+SDLMAIN_LIBRARY:FILEPATH=SDLMAIN_LIBRARY-NOTFOUND
+
+//Path to a file.
+SDL_INCLUDE_DIR:PATH=SDL_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+SDL_LIBRARY_TEMP:FILEPATH=SDL_LIBRARY_TEMP-NOTFOUND
 
 //Enable debian style python package layout
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
@@ -251,14 +316,83 @@ _CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
 //Path to a file.
 _CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
 
+//Path to a file.
+_path_name:FILEPATH=/home/ankur/hector_quadrotor_ws/src/vision_opencv/cv_bridge/test/python_bindings.py
+
+//The directory containing a CMake configuration file for actionlib.
+actionlib_DIR:PATH=/opt/ros/indigo/share/actionlib/cmake
+
+//The directory containing a CMake configuration file for actionlib_msgs.
+actionlib_msgs_DIR:PATH=/opt/ros/indigo/share/actionlib_msgs/cmake
+
+//The directory containing a CMake configuration file for amcl.
+amcl_DIR:PATH=amcl_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for angles.
+angles_DIR:PATH=/opt/ros/indigo/share/angles/cmake
+
+//The directory containing a CMake configuration file for camera_info_manager.
+camera_info_manager_DIR:PATH=/opt/ros/indigo/share/camera_info_manager/cmake
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake
+
+//The directory containing a CMake configuration file for class_loader.
+class_loader_DIR:PATH=/opt/ros/indigo/share/class_loader/cmake
+
+//Value Computed by CMake
+command_matcher_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/command_matcher
+
+//Value Computed by CMake
+command_matcher_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/command_matcher
+
+//The directory containing a CMake configuration file for controller_interface.
+controller_interface_DIR:PATH=/opt/ros/indigo/share/controller_interface/cmake
 
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake
 
+//Value Computed by CMake
+cv_bridge_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/vision_opencv/cv_bridge
+
+//The directory containing a CMake configuration file for cv_bridge.
+cv_bridge_DIR:PATH=/home/ankur/hector_quadrotor_ws/devel/share/cv_bridge/cmake
+
+//Dependencies for the target
+cv_bridge_LIB_DEPENDS:STATIC=general;opencv_videostab;general;opencv_video;general;opencv_superres;general;opencv_stitching;general;opencv_photo;general;opencv_ocl;general;opencv_objdetect;general;opencv_ml;general;opencv_legacy;general;opencv_imgproc;general;opencv_highgui;general;opencv_gpu;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_contrib;general;opencv_calib3d;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+
+//Value Computed by CMake
+cv_bridge_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/vision_opencv/cv_bridge
+
+//Dependencies for the target
+cv_bridge_boost_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libboost_python.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;cv_bridge;
+
+//Value Computed by CMake
+fake_localization_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/navigation/fake_localization
+
+//Value Computed by CMake
+fake_localization_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/navigation/fake_localization
+
+//The directory containing a CMake configuration file for gencpp.
+gencpp_DIR:PATH=/opt/ros/indigo/share/gencpp/cmake
+
+//The directory containing a CMake configuration file for genlisp.
+genlisp_DIR:PATH=/opt/ros/indigo/share/genlisp/cmake
+
+//The directory containing a CMake configuration file for genmsg.
+genmsg_DIR:PATH=/opt/ros/indigo/share/genmsg/cmake
+
+//The directory containing a CMake configuration file for genpy.
+genpy_DIR:PATH=/opt/ros/indigo/share/genpy/cmake
+
 //The directory containing a CMake configuration file for geometry_msgs.
 geometry_msgs_DIR:PATH=/opt/ros/indigo/share/geometry_msgs/cmake
+
+//Value Computed by CMake
+gspeech_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/gspeech
+
+//Value Computed by CMake
+gspeech_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/gspeech
 
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/gtest
@@ -285,11 +419,107 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//The directory containing a CMake configuration file for hardware_interface.
+hardware_interface_DIR:PATH=/opt/ros/indigo/share/hardware_interface/cmake
+
+//Value Computed by CMake
+hmi_robin_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/hmi_robin
+
+//Value Computed by CMake
+hmi_robin_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/hmi_robin
+
+//Value Computed by CMake
+image_geometry_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/vision_opencv/image_geometry
+
+//Dependencies for the target
+image_geometry_LIB_DEPENDS:STATIC=general;opencv_videostab;general;opencv_video;general;opencv_superres;general;opencv_stitching;general;opencv_photo;general;opencv_ocl;general;opencv_objdetect;general;opencv_ml;general;opencv_legacy;general;opencv_imgproc;general;opencv_highgui;general;opencv_gpu;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_contrib;general;opencv_calib3d;
+
+//Value Computed by CMake
+image_geometry_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/vision_opencv/image_geometry
+
+//Value Computed by CMake
+image_proc_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/image_proc
+
+//Value Computed by CMake
+image_proc_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/image_proc
+
+//The directory containing a CMake configuration file for image_transport.
+image_transport_DIR:PATH=/opt/ros/indigo/share/image_transport/cmake
+
+//Value Computed by CMake
+indoor_slam_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/indoor_slam
+
+//Value Computed by CMake
+indoor_slam_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/indoor_slam
+
+//The directory containing a CMake configuration file for kdl_parser.
+kdl_parser_DIR:PATH=/opt/ros/indigo/share/kdl_parser/cmake
+
 //Path to a library.
-lib:FILEPATH=/opt/ros/indigo/lib/libxmlrpcpp.so
+lib:FILEPATH=/opt/ros/indigo/lib/libtf2.so
+
+//Value Computed by CMake
+map_server_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/navigation/map_server
+
+//Value Computed by CMake
+map_server_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/navigation/map_server
+
+//The directory containing a CMake configuration file for message_filters.
+message_filters_DIR:PATH=/opt/ros/indigo/share/message_filters/cmake
+
+//The directory containing a CMake configuration file for message_generation.
+message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/indigo/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for nav_msgs.
+nav_msgs_DIR:PATH=/opt/ros/indigo/share/nav_msgs/cmake
+
+//Value Computed by CMake
+navigation_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/navigation/navigation
+
+//Value Computed by CMake
+navigation_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/navigation/navigation
+
+//Value Computed by CMake
+opencv_tests_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/vision_opencv/opencv_tests
+
+//Value Computed by CMake
+opencv_tests_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/vision_opencv/opencv_tests
+
+//The directory containing a CMake configuration file for pluginlib.
+pluginlib_DIR:PATH=/opt/ros/indigo/share/pluginlib/cmake
+
+//The directory containing a CMake configuration file for pr2_controller_interface.
+pr2_controller_interface_DIR:PATH=/opt/ros/indigo/share/pr2_controller_interface/cmake
+
+//The directory containing a CMake configuration file for pr2_controllers_msgs.
+pr2_controllers_msgs_DIR:PATH=/opt/ros/indigo/share/pr2_controllers_msgs/cmake
+
+//Value Computed by CMake
+pr2_gripper_sensor_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/pr2_gripper_sensor
+
+//Value Computed by CMake
+pr2_gripper_sensor_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/pr2_gripper_sensor
+
+//Value Computed by CMake
+pr2_gripper_sensor_controller_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/pr2_gripper_sensor_controller
+
+//Value Computed by CMake
+pr2_gripper_sensor_controller_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/pr2_gripper_sensor_controller
+
+//Value Computed by CMake
+pr2_gripper_sensor_msgs_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/pr2_gripper_sensor_msgs
+
+//Value Computed by CMake
+pr2_gripper_sensor_msgs_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/pr2_gripper_sensor_msgs
+
+//The directory containing a CMake configuration file for pr2_hardware_interface.
+pr2_hardware_interface_DIR:PATH=/opt/ros/indigo/share/pr2_hardware_interface/cmake
+
+//The directory containing a CMake configuration file for pr2_mechanism_model.
+pr2_mechanism_model_DIR:PATH=/opt/ros/indigo/share/pr2_mechanism_model/cmake
 
 //Value Computed by CMake
 random_motion_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/random_motion
@@ -297,8 +527,14 @@ random_motion_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/random_mot
 //Value Computed by CMake
 random_motion_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/random_motion
 
+//The directory containing a CMake configuration file for realtime_tools.
+realtime_tools_DIR:PATH=/opt/ros/indigo/share/realtime_tools/cmake
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/indigo/share/rosconsole/cmake
+
+//The directory containing a CMake configuration file for rosconsole_bridge.
+rosconsole_bridge_DIR:PATH=/opt/ros/indigo/share/rosconsole_bridge/cmake
 
 //The directory containing a CMake configuration file for roscpp.
 roscpp_DIR:PATH=/opt/ros/indigo/share/roscpp/cmake
@@ -309,8 +545,20 @@ roscpp_serialization_DIR:PATH=/opt/ros/indigo/share/roscpp_serialization/cmake
 //The directory containing a CMake configuration file for roscpp_traits.
 roscpp_traits_DIR:PATH=/opt/ros/indigo/share/roscpp_traits/cmake
 
+//The directory containing a CMake configuration file for rosgraph.
+rosgraph_DIR:PATH=/opt/ros/indigo/share/rosgraph/cmake
+
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/indigo/share/rosgraph_msgs/cmake
+
+//The directory containing a CMake configuration file for roslib.
+roslib_DIR:PATH=/opt/ros/indigo/share/roslib/cmake
+
+//The directory containing a CMake configuration file for rospy.
+rospy_DIR:PATH=/opt/ros/indigo/share/rospy/cmake
+
+//The directory containing a CMake configuration file for rosrt.
+rosrt_DIR:PATH=rosrt_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/indigo/share/rostime/cmake
@@ -318,8 +566,74 @@ rostime_DIR:PATH=/opt/ros/indigo/share/rostime/cmake
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/indigo/share/sensor_msgs/cmake
 
+//The directory containing a CMake configuration file for sound_play.
+sound_play_DIR:PATH=sound_play_DIR-NOTFOUND
+
+//Value Computed by CMake
+speech_database_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/speech_database
+
+//Value Computed by CMake
+speech_database_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/speech_database
+
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/indigo/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for std_srvs.
+std_srvs_DIR:PATH=/opt/ros/indigo/share/std_srvs/cmake
+
+//The directory containing a CMake configuration file for tf2.
+tf2_DIR:PATH=/opt/ros/indigo/share/tf2/cmake
+
+//The directory containing a CMake configuration file for tf2_msgs.
+tf2_msgs_DIR:PATH=/opt/ros/indigo/share/tf2_msgs/cmake
+
+//The directory containing a CMake configuration file for tf2_py.
+tf2_py_DIR:PATH=/opt/ros/indigo/share/tf2_py/cmake
+
+//The directory containing a CMake configuration file for tf2_ros.
+tf2_ros_DIR:PATH=/opt/ros/indigo/share/tf2_ros/cmake
+
+//The directory containing a CMake configuration file for tf.
+tf_DIR:PATH=/opt/ros/indigo/share/tf/cmake
+
+//The directory containing a CMake configuration file for trajectory_msgs.
+trajectory_msgs_DIR:PATH=/opt/ros/indigo/share/trajectory_msgs/cmake
+
+//Value Computed by CMake
+turtlebot3_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/turtlebot3/turtlebot3
+
+//Value Computed by CMake
+turtlebot3_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/turtlebot3/turtlebot3
+
+//Value Computed by CMake
+turtlebot3_bringup_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/turtlebot3/turtlebot3_bringup
+
+//Value Computed by CMake
+turtlebot3_bringup_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/turtlebot3/turtlebot3_bringup
+
+//Value Computed by CMake
+turtlebot3_navigation_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/turtlebot3/turtlebot3_navigation
+
+//Value Computed by CMake
+turtlebot3_navigation_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/turtlebot3/turtlebot3_navigation
+
+//The directory containing a CMake configuration file for urdf.
+urdf_DIR:PATH=/opt/ros/indigo/share/urdf/cmake
+
+//Value Computed by CMake
+usb_cam_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/usb_cam
+
+//Dependencies for the target
+usb_cam_LIB_DEPENDS:STATIC=general;avcodec;general;swscale;general;/opt/ros/indigo/lib/libimage_transport.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libcamera_info_manager.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+
+//Value Computed by CMake
+usb_cam_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/usb_cam
+
+//Value Computed by CMake
+vision_opencv_BINARY_DIR:STATIC=/home/ankur/hector_quadrotor_ws/build/vision_opencv/vision_opencv
+
+//Value Computed by CMake
+vision_opencv_SOURCE_DIR:STATIC=/home/ankur/hector_quadrotor_ws/src/vision_opencv/vision_opencv
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/indigo/share/xmlrpcpp/cmake
@@ -329,6 +643,20 @@ xmlrpcpp_DIR:PATH=/opt/ros/indigo/share/xmlrpcpp/cmake
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_INCLUDE_DIR
+Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR
+Boost_LIBRARY_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_PYTHON_LIBRARY_DEBUG
+Boost_PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_PYTHON_LIBRARY_RELEASE
+Boost_PYTHON_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SIGNALS_LIBRARY_DEBUG
+Boost_SIGNALS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SIGNALS_LIBRARY_RELEASE
+Boost_SIGNALS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/ankur/hector_quadrotor_ws/build/catkin_generated/env_cached.sh
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/ankur/hector_quadrotor_ws/build/test_results
@@ -426,7 +754,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=3
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=15
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -467,8 +795,12 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.26()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.6()]
+//Details about finding PythonLibs
+FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpython2.7.so][/usr/include/python2.7;/usr/include/x86_64-linux-gnu/python2.7][v2.7.6(2.7)]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 GTEST_FROM_SOURCE_FOUND:INTERNAL=TRUE
@@ -486,10 +818,108 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_DBG
+OpenCV_3RDPARTY_LIB_DIR_DBG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_OPT
+OpenCV_3RDPARTY_LIB_DIR_OPT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_CONFIG_PATH
+OpenCV_CONFIG_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_LIB_DIR_DBG
+OpenCV_LIB_DIR_DBG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_LIB_DIR_OPT
+OpenCV_LIB_DIR_OPT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_INCLUDE_DIR
+PYTHON_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_INCLUDE_DIR2
+PYTHON_INCLUDE_DIR2-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
+//ADVANCED property for variable: PYTHON_LIBRARY
+PYTHON_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
+PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//Components requested for this build tree.
+_Boost_COMPONENTS_SEARCHED:INTERNAL=python;signals
+//Last used Boost_INCLUDE_DIR value.
+_Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
+//Last used Boost_LIBRARY_DIR value.
+_Boost_LIBRARY_DIR_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
+//Last used Boost_USE_MULTITHREADED value.
+_Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+__pkg_config_checked_avcodec:INTERNAL=1
+__pkg_config_checked_swscale:INTERNAL=1
+avcodec_CFLAGS:INTERNAL=
+avcodec_CFLAGS_I:INTERNAL=
+avcodec_CFLAGS_OTHER:INTERNAL=
+avcodec_FOUND:INTERNAL=1
+avcodec_INCLUDEDIR:INTERNAL=/usr/include
+avcodec_INCLUDE_DIRS:INTERNAL=
+avcodec_LDFLAGS:INTERNAL=-lavcodec
+avcodec_LDFLAGS_OTHER:INTERNAL=
+avcodec_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+avcodec_LIBRARIES:INTERNAL=avcodec
+avcodec_LIBRARY_DIRS:INTERNAL=
+avcodec_LIBS:INTERNAL=
+avcodec_LIBS_L:INTERNAL=
+avcodec_LIBS_OTHER:INTERNAL=
+avcodec_LIBS_PATHS:INTERNAL=
+avcodec_PREFIX:INTERNAL=/usr
+avcodec_STATIC_CFLAGS:INTERNAL=
+avcodec_STATIC_CFLAGS_I:INTERNAL=
+avcodec_STATIC_CFLAGS_OTHER:INTERNAL=
+avcodec_STATIC_INCLUDE_DIRS:INTERNAL=
+avcodec_STATIC_LDFLAGS:INTERNAL=-pthread;-lavcodec;-ldl;-lXfixes;-lXext;-lX11;-lcdio_paranoia;-lcdio_cdda;-lcdio;-ljack;-lasound;-ldc1394;-lraw1394;-lgcrypt;-lxvidcore;-lx264;-lvpx;-lvorbisenc;-lvorbis;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lschroedinger-1.0;-lrtmp;-lpulse-simple;-lpulse;-lopus;-lopenjpeg;-lmp3lame;-lgsm;-lfreetype;-lgnutls;-lva;-lbz2;-lz;-lavutil;-lm
+avcodec_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+avcodec_STATIC_LIBDIR:INTERNAL=
+avcodec_STATIC_LIBRARIES:INTERNAL=avcodec;dl;Xfixes;Xext;X11;cdio_paranoia;cdio_cdda;cdio;jack;asound;dc1394;raw1394;gcrypt;xvidcore;x264;vpx;vorbisenc;vorbis;theoraenc;theoradec;ogg;speex;schroedinger-1.0;rtmp;pulse-simple;pulse;opus;openjpeg;mp3lame;gsm;freetype;gnutls;va;bz2;z;avutil;m
+avcodec_STATIC_LIBRARY_DIRS:INTERNAL=
+avcodec_STATIC_LIBS:INTERNAL=
+avcodec_STATIC_LIBS_L:INTERNAL=
+avcodec_STATIC_LIBS_OTHER:INTERNAL=
+avcodec_STATIC_LIBS_PATHS:INTERNAL=
+avcodec_VERSION:INTERNAL=54.35.1
+avcodec_libavcodec_INCLUDEDIR:INTERNAL=
+avcodec_libavcodec_LIBDIR:INTERNAL=
+avcodec_libavcodec_PREFIX:INTERNAL=
+avcodec_libavcodec_VERSION:INTERNAL=
+swscale_CFLAGS:INTERNAL=
+swscale_CFLAGS_I:INTERNAL=
+swscale_CFLAGS_OTHER:INTERNAL=
+swscale_FOUND:INTERNAL=1
+swscale_INCLUDEDIR:INTERNAL=/usr/include
+swscale_INCLUDE_DIRS:INTERNAL=
+swscale_LDFLAGS:INTERNAL=-lswscale
+swscale_LDFLAGS_OTHER:INTERNAL=
+swscale_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+swscale_LIBRARIES:INTERNAL=swscale
+swscale_LIBRARY_DIRS:INTERNAL=
+swscale_LIBS:INTERNAL=
+swscale_LIBS_L:INTERNAL=
+swscale_LIBS_OTHER:INTERNAL=
+swscale_LIBS_PATHS:INTERNAL=
+swscale_PREFIX:INTERNAL=/usr
+swscale_STATIC_CFLAGS:INTERNAL=
+swscale_STATIC_CFLAGS_I:INTERNAL=
+swscale_STATIC_CFLAGS_OTHER:INTERNAL=
+swscale_STATIC_INCLUDE_DIRS:INTERNAL=
+swscale_STATIC_LDFLAGS:INTERNAL=-lswscale;-lavutil;-lm
+swscale_STATIC_LDFLAGS_OTHER:INTERNAL=
+swscale_STATIC_LIBDIR:INTERNAL=
+swscale_STATIC_LIBRARIES:INTERNAL=swscale;avutil;m
+swscale_STATIC_LIBRARY_DIRS:INTERNAL=
+swscale_STATIC_LIBS:INTERNAL=
+swscale_STATIC_LIBS_L:INTERNAL=
+swscale_STATIC_LIBS_OTHER:INTERNAL=
+swscale_STATIC_LIBS_PATHS:INTERNAL=
+swscale_VERSION:INTERNAL=2.1.1
+swscale_libswscale_INCLUDEDIR:INTERNAL=
+swscale_libswscale_LIBDIR:INTERNAL=
+swscale_libswscale_PREFIX:INTERNAL=
+swscale_libswscale_VERSION:INTERNAL=
 

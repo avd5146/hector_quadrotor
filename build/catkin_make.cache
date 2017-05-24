@@ -1,2 +1,2 @@
-random_motion
+image_proc:indoor_slam:navigation/amcl:navigation/base_local_planner:navigation/carrot_planner:navigation/clear_costmap_recovery:navigation/costmap_2d:navigation/dwa_local_planner:navigation/fake_localization:navigation/global_planner:navigation/map_server:navigation/move_base:navigation/move_slow_and_clear:navigation/nav_core:navigation/navfn:navigation/navigation:navigation/robot_pose_ekf:navigation/rotate_recovery:navigation/voxel_grid:random_motion:usb_cam:vision_opencv/cv_bridge:vision_opencv/image_geometry:vision_opencv/opencv_tests:vision_opencv/vision_opencv
 -DCATKIN_DEVEL_PREFIX=/home/ankur/hector_quadrotor_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ankur/hector_quadrotor_ws/install -G Unix Makefiles

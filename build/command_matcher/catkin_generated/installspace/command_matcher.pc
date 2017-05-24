@@ -1,0 +1,8 @@
+prefix=/home/ankur/hector_quadrotor_ws/install
+
+Name: command_matcher
+Description: Description of command_matcher
+Version: 0.5.0
+Cflags: 
+Libs: -L/home/ankur/hector_quadrotor_ws/install/lib 
+Requires: roscpp std_msgs

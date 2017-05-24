@@ -1,0 +1,8 @@
+prefix=/home/ankur/hector_quadrotor_ws/install
+
+Name: indoor_slam
+Description: Description of indoor_slam
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ankur/hector_quadrotor_ws/install/lib 
+Requires: 

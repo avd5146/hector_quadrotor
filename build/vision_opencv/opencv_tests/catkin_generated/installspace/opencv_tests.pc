@@ -1,0 +1,8 @@
+prefix=/home/ankur/hector_quadrotor_ws/install
+
+Name: opencv_tests
+Description: Description of opencv_tests
+Version: 1.11.15
+Cflags: 
+Libs: -L/home/ankur/hector_quadrotor_ws/install/lib 
+Requires: 
