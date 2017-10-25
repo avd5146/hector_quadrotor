@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node name="odom_fuse" pkg="odom_fusion" type="odom_fuse_nodelet" output="screen">
+    <rosparam command="load" file="$(find odom_fuse)/cfg/params.yaml" />
+  </node>
+</launch>
