@@ -44,7 +44,10 @@ int main(int argc,char **argv)
 	ros::NodeHandle nh;
 
 	Fuse fuse;
-	int rate;
-	nh.getParam("rate",rate);
+	int rate=10;
+	// nh.getParam("rate",rate);
+	// fuse.test();
 	fuse.start_fusion(rate);
+	// Fuse::start_fusion(rate);
+	
 }

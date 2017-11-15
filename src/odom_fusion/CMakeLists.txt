@@ -211,5 +211,13 @@ include_directories($(root_SOURCE_DIR)/include)
 # add_executable(odom_fuse_nodelet src/odom_fuse_nodelet.cpp)
 # target_link_libraries(odom_fuse_nodelet ${catkin_LIBRARIES})
 
-add_executable(odom_fuse src/odom_fuse.cpp)
-target_link_libraries(odom_fuse ${catkin_LIBRARIES})
+#AVD
+
+#add_definitions(-DTESTING)
+
+add_library(odom_fuse src/odom_fuse.cpp)
+#add_library(odom_fuse_nodelet src/odom_fuse_nodelet.cpp)
+#target_link_libraries(odom_fuse       odom_fuse_nodelet)
+
+add_executable(odom_fusion src/odom_fuse_nodelet.cpp) # FIXME working here. Add odom_fuse.cpp as library.
+target_link_libraries(odom_fusion odom_fuse ${catkin_LIBRARIES} )

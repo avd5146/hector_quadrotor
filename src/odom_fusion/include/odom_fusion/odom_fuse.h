@@ -46,6 +46,12 @@ class Fuse{
 public:
 	ros::NodeHandle nh1,nh2;
 	ros::CallbackQueue queue1,queue2;
+	Fuse();
+	~Fuse();
+	/*
+	 * Start fusion main loop.
+	 */
+	void start_fusion(int);
 	/*
 	 * Subscribe data from encoder topic.
 	 */
@@ -54,10 +60,8 @@ public:
 	 * Subscribe data from ZED topic.
 	 */
 	void get_ZED(const geometry_msgs::Pose);
-	/*
-	 * Start fusion main loop.
-	 */
-	void start_fusion(int);
+	void test();
+	
 private:
 protected:
 
